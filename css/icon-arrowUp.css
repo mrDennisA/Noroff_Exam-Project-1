@@ -1,0 +1,46 @@
+#arrowUpContainer {
+    position: -webkit-sticky;
+    position: sticky;
+    bottom: var(--xl);
+    right: 0;
+}
+
+#arrowUp {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    display: none;
+    height: var(--l);
+    width: var(--l);
+}
+
+.arrowUp {
+    overflow: hidden;
+    height: var(--l);
+    width: var(--l);
+    cursor: pointer;
+}
+
+.arrowUp:hover {
+    background-color: var(--color08);
+}
+
+.arrowUp polyline {
+    fill: none;
+    stroke: var(--color08);
+    stroke-miterlimit: 10;
+    stroke-width: 2px;
+}
+
+.arrowUp:hover polyline {
+    stroke: var(--color01);
+}
+
+@media only screen and (min-width: 768px) {
+    #arrowUp {
+        right: var(--m);
+    }
+}
+
+@media only screen and (min-width: 992px) {
+}

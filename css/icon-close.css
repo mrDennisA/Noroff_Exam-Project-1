@@ -1,0 +1,37 @@
+.close {
+    z-index: 1;
+    position: absolute;
+    top: 0;
+    right: 0;
+    transform: translate(0, -100%);
+    width: var(--l);
+    height: var(--l);
+}
+
+.close:hover {
+    background-color: var(--color08);
+}
+.close:active {
+    background-color: var(--color09);
+}
+
+.close span {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 50%;
+    height: 4px;
+    background-color: var(--color08);
+    border-radius: 2px;
+}
+.close:hover span {
+    background-color: var(--color01);
+}
+
+.close span:nth-child(1) {
+    transform: translate(-50%, -50%) rotate(45deg);
+}
+
+.close span:nth-child(2) {
+    transform: translate(-50%, -50%) rotate(-45deg);
+}

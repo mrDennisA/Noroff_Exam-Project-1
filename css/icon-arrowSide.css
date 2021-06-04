@@ -1,0 +1,63 @@
+#arrowSideLeft,
+#arrowSideRight {
+    z-index: 1;
+    position: absolute;
+    top: 50%;
+    background-color: var(--highlight01);
+}
+
+#arrowSideLeft {
+    left: 0;
+    transform: translate(-24px, -50%);
+}
+
+#arrowSideRight {
+    right: 0;
+    transform: translate(24px, -50%);
+}
+
+.arrowSide {
+    overflow: hidden;
+    height: var(--xl);
+    width: var(--l);
+    cursor: pointer;
+}
+
+.arrowSide:hover {
+    background-color: var(--color08);
+}
+
+.arrowSide polyline {
+    fill: none;
+    stroke: var(--color08);
+    stroke-miterlimit: 10;
+    stroke-width: 2px;
+}
+
+.arrowSide:hover polyline {
+    stroke: var(--color01);
+}
+
+@media only screen and (min-width: 768px) {
+    #arrowSideLeft {
+        left: 0;
+        transform: translate(-100%, -50%);
+    }
+
+    #arrowSideRight {
+        right: 0;
+        transform: translate(100%, -50%);
+    }
+}
+
+@media only screen and (min-width: 992px) {
+    #arrowSideLeft {
+        left: 0;
+        transform: translate(-200%, -50%);
+    }
+
+    #arrowSideRight {
+        right: 0;
+        transform: translate(200%, -50%);
+    }
+}

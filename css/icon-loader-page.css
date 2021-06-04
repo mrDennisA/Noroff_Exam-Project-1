@@ -1,0 +1,71 @@
+#page-loader {
+    position: fixed;
+    top: 100px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    justify-content: space-between;
+    width: 80px;
+    height: 2px;
+}
+
+#page-loader span {
+    display: block;
+    --dalay: 1.5;
+
+    width: 30%;
+    height: 100%;
+    transform: rotate(0);
+    box-shadow: 0 0 0 1px var(--color09);
+    background-color: transparent;
+
+    animation-name: loader;
+    animation-duration: calc(0.8s * var(--dalay));
+    animation-timing-function: ease;
+    animation-fill-mode: forwards;
+    animation-iteration-count: infinite;
+}
+
+#page-loader span:nth-child(1) {
+    animation-delay: calc(0s * var(--dalay));
+}
+#page-loader span:nth-child(2) {
+    animation-delay: calc(0.2s * var(--dalay));
+}
+#page-loader span:nth-child(3) {
+    animation-delay: calc(0.4s * var(--dalay));
+}
+
+@keyframes loader {
+    25% {
+        transform: rotate(0);
+        box-shadow: 0 0 0 1px var(--color09);
+        background-color: transparent;
+    }
+
+    50% {
+        transform: rotate(180deg);
+
+        box-shadow: 0 0 0 1px transparent;
+        background-color: var(--color08);
+    }
+    75% {
+        transform: rotate(180deg);
+        box-shadow: 0 0 0 1px var(--color09);
+        background-color: transparent;
+    }
+    100% {
+        transform: rotate(180deg);
+    }
+}
+
+@media only screen and (min-width: 768px) {
+    #page-loader {
+        width: 90px;
+    }
+}
+@media only screen and (min-width: 992px) {
+    #page-loader {
+        width: 100px;
+    }
+}

@@ -1,0 +1,121 @@
+/* Modal */
+#modalContainer {
+    display: none;
+    z-index: 4;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background-color: var(--shadow02);
+}
+
+.modal {
+    position: relative;
+    width: auto;
+    max-width: calc(100%);
+    height: auto;
+    max-height: calc(100vh - var(--xl));
+    margin: auto;
+}
+
+.modal img {
+    max-width: calc(100vw);
+    max-height: calc(100vh - var(--xl));
+}
+
+/* Post */
+section {
+    display: grid;
+    gap: var(--l);
+    max-width: 800px;
+    margin: auto;
+    padding: 0 0 var(--xl);
+}
+
+section > div:nth-child(2) {
+    display: grid;
+    gap: var(--l);
+    padding: 0 var(--m);
+}
+
+.title {
+    position: relative;
+    border-bottom: 1px var(--shadowHover) solid;
+}
+
+.title > div {
+    position: absolute;
+    top: calc(100% + var(--xs));
+    left: 0;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.title a:hover {
+    color: var(--color08);
+}
+
+figure {
+    position: relative;
+    overflow: hidden;
+    cursor: zoom-in;
+}
+
+figure img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+figure img:hover {
+    transform: scale(1.05);
+}
+
+.featured {
+    max-height: 400px;
+    height: 50vw;
+}
+
+.description {
+    display: grid;
+    gap: var(--l);
+    padding: var(--m) var(--s);
+}
+
+@media only screen and (min-width: 768px) {
+    .modal {
+        max-width: calc(100% - var(--l));
+    }
+
+    .modal img {
+        max-width: calc(100vw - var(--l));
+    }
+    section {
+        padding: 0 var(--l) var(--xl);
+    }
+
+    section > div:nth-child(2) {
+        padding: unset;
+    }
+
+    .title {
+        padding: 0;
+    }
+
+    .title > div {
+        padding: 0;
+    }
+
+    .description {
+        padding: var(--m);
+    }
+}
+@media only screen and (min-width: 992px) {
+    .modal {
+        max-width: calc(100% - var(--xl));
+    }
+
+    .modal img {
+        max-width: calc(100vw - var(--xl));
+    }
+}

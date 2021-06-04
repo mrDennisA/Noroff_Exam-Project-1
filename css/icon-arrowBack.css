@@ -1,0 +1,105 @@
+.arrowBack {
+    position: relative;
+
+    width: var(--l);
+    height: var(--l);
+    /* background-color: red; */
+}
+
+.arrowBack:hover {
+    background-color: var(--color08);
+}
+
+.arrowBack span {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.arrowBack span:nth-child(1),
+.arrowBack span:nth-child(2),
+.arrowBack span:nth-child(3),
+.arrowBack span:nth-child(4) {
+    background-color: var(--color08);
+}
+
+.arrowBack:hover span:nth-child(1),
+.arrowBack:hover span:nth-child(2),
+.arrowBack:hover span:nth-child(3),
+.arrowBack:hover span:nth-child(4) {
+    background-color: var(--color01);
+}
+
+.arrowBack span:nth-child(1) {
+    transform: translate(0, 15px);
+    width: 2px;
+    height: 20px;
+}
+
+.arrowBack span:nth-child(2) {
+    transform-origin: top left;
+    transform: translate(10px, 16px) rotate(-45deg);
+    width: 12px;
+    height: 2px;
+}
+
+.arrowBack:hover span:nth-child(2) {
+    transform: translate(5px, 16px) rotate(-45deg);
+}
+
+.arrowBack span:nth-child(3) {
+    transform-origin: bottom left;
+    transform: translate(10px, 14px) rotate(45deg);
+    width: 12px;
+    height: 2px;
+}
+
+.arrowBack:hover span:nth-child(3) {
+    transform: translate(5px, 14px) rotate(45deg);
+}
+
+.arrowBack span:nth-child(4) {
+    transform: translate(12px, 15px);
+    width: 20px;
+    height: 2px;
+}
+.arrowBack:hover span:nth-child(4) {
+    width: 24px;
+    transform: translate(6px, 15px);
+}
+
+.arrowBack span:nth-child(5) {
+    transform: translate(30px, 15px);
+    width: 10px;
+    height: 10px;
+    border: 2px var(--color08) solid;
+    border-left: unset;
+    border-bottom: unset;
+    border-radius: 0 10px 0 0;
+}
+
+.arrowBack:hover span:nth-child(5) {
+    border: 2px var(--color01) solid;
+    border-left: unset;
+    border-bottom: unset;
+    border-radius: 0 10px 0 0;
+}
+
+.arrowBack span:nth-child(6) {
+    transform-origin: bottom left;
+    transform: translate(30px, 15px) rotate(90deg);
+    width: 10px;
+    height: 10px;
+    border: 2px var(--color08) solid;
+    border-left: unset;
+    border-bottom: unset;
+    border-radius: 0 10px 0 0;
+}
+
+.arrowBack:hover span:nth-child(6) {
+    transform: translate(30px, 15px) rotate(00deg);
+    border: 2px var(--color01) solid;
+    border-left: unset;
+    border-bottom: unset;
+    border-radius: 0 10px 0 0;
+}

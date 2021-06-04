@@ -1,0 +1,54 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@200;300;400;600;700;800");
+
+/* LinkedIn */
+@import url("https://use.typekit.net/mgd5irh.css");
+
+:root {
+    --font01: "Nunito Sans", sans-serif;
+    --linkedIn: "Myriad-Pro", sans-serif;
+}
+
+h1 {
+    font-size: 1.875rem;
+}
+h2,
+.h2 {
+    font-size: 1.625rem;
+}
+h3,
+.h3 {
+    font-size: 1.375rem;
+}
+h4,
+.h4 {
+    font-size: 1.125rem;
+}
+
+.fs14 {
+    font-size: 0.875rem;
+}
+
+.fw100 {
+    font-weight: 200;
+}
+
+.fw300 {
+    font-weight: 300;
+}
+
+.fw400 {
+    font-weight: 400;
+}
+
+.fw600 {
+    font-weight: 600;
+}
+
+.fw800 {
+    font-weight: 800;
+}
+
+@media only screen and (min-width: 768px) {
+}
+@media only screen and (min-width: 992px) {
+}

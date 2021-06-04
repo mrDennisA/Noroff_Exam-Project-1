@@ -1,0 +1,122 @@
+.overlay {
+    z-index: 2;
+    position: fixed;
+    top: 0;
+    right: 0;
+    display: none;
+    width: 100%;
+    height: 100%;
+
+    background-color: var(--shadow01);
+}
+
+.overlay.open {
+    display: block;
+}
+
+header {
+    height: var(--l);
+}
+
+header > div {
+    display: grid;
+    grid-template-columns: auto 1fr;
+}
+
+#logo {
+    display: flex;
+    align-items: center;
+    height: 100%;
+}
+
+#logo a:nth-child(1) {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: var(--l);
+    height: var(--l);
+}
+
+#logo a:nth-child(1):hover {
+    color: var(--color01);
+    background-color: var(--color08);
+}
+
+#logo a:nth-child(3) {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 2px;
+    height: var(--l);
+}
+#logo a:nth-child(3):hover {
+    color: var(--color01);
+    background-color: var(--color06);
+}
+
+#logo span {
+    padding: 2px;
+}
+
+nav {
+    position: relative;
+}
+
+#navBar {
+    overflow: hidden;
+    z-index: 3;
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: var(--navOff);
+    height: var(--navOff);
+    background-color: transparent;
+}
+
+#navBar:hover {
+    background-color: var(--color08);
+}
+
+#navBar.open {
+    width: var(--navOn);
+    height: var(--navOn);
+    background-color: var(--color08);
+}
+
+#navBar-links {
+    position: absolute;
+    top: 0;
+    left: 100%;
+    height: var(--navOn);
+    opacity: 0;
+}
+
+#navBar.open #navBar-links {
+    left: 0;
+    opacity: 1;
+}
+
+#navBar-links div {
+    position: absolute;
+    bottom: 0;
+    display: grid;
+    width: var(--navOn);
+    padding-bottom: var(--m);
+}
+
+#navBar-links a {
+    width: auto;
+    margin: 0 var(--m);
+    padding: var(--xs) 0 var(--xs) var(--m);
+    color: var(--color01);
+    text-align: left;
+}
+
+#navBar-links a:hover {
+    padding-left: 0;
+}
+
+@media only screen and (min-width: 768px) {
+}
+@media only screen and (min-width: 992px) {
+}

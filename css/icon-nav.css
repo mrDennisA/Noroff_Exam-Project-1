@@ -1,0 +1,65 @@
+/* Nav Icon */
+#navBar-icon {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: var(--l);
+    height: var(--l);
+    background-color: transparent;
+}
+
+#navBar-icon span {
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 50%;
+    height: 2px;
+
+    background-color: var(--color08);
+}
+
+#navBar-icon span:nth-child(1) {
+    /* display: none; */
+    top: 20px;
+}
+
+#navBar-icon.enter span:nth-child(1) {
+    top: 50%;
+    background-color: var(--color02);
+    transform: translate(-50%, -50%) rotate(90deg);
+}
+
+#navBar.open #navBar-icon.enter span:nth-child(1) {
+    top: 50%;
+    background-color: var(--color02);
+    transform: translate(-50%, -50%) rotate(90deg);
+}
+#navBar.open #navBar-icon.leave span:nth-child(1) {
+    top: 50%;
+    background-color: var(--color02);
+    transform: translate(-50%, -50%) rotate(135deg);
+}
+
+/* 2 */
+#navBar-icon span:nth-child(2) {
+    /* display: none; */
+    top: 30px;
+}
+
+#navBar-icon.enter span:nth-child(2) {
+    top: 50%;
+    background-color: var(--color02);
+    transform: translate(-50%, -50%) rotate(0deg);
+}
+
+#navBar.open #navBar-icon.enter span:nth-child(2) {
+    top: 50%;
+    background-color: var(--color02);
+    transform: translate(-50%, -50%) rotate(0deg);
+}
+
+#navBar.open #navBar-icon.leave span:nth-child(2) {
+    top: 50%;
+    background-color: var(--color02);
+    transform: translate(-50%, -50%) rotate(45deg);
+}

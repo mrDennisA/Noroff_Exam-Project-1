@@ -1,0 +1,27 @@
+footer > div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: var(--xl);
+}
+footer .copyright {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+footer .copyright li {
+    color: var(--color07);
+}
+
+footer .year {
+    padding: 0 5px;
+}
+
+footer .author {
+    padding: 0 5px 0 0;
+}
+
+footer a:hover {
+    color: var(--color08);
+}

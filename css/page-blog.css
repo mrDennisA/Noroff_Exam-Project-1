@@ -1,0 +1,38 @@
+section {
+    display: grid;
+    gap: var(--l);
+    padding: 0 var(--m) var(--xl);
+}
+
+section > div:nth-child(1) {
+    display: flex;
+    justify-content: space-between;
+}
+
+section > div:nth-child(1) select {
+    width: 125px;
+    height: 100%;
+    padding: 0 var(--xs);
+    border: unset;
+    box-shadow: 0 -1px 0 0 var(--color07) inset;
+    background-color: var(--color01);
+    appearance: none;
+    cursor: pointer;
+}
+
+section > div:nth-child(1) select:hover {
+    box-shadow: 0 -2px 0 0 var(--color07) inset;
+    filter: drop-shadow(0 var(--s) var(--s) var(--shadowHover));
+}
+
+@media only screen and (min-width: 768px) {
+    section {
+        padding: 0 var(--l) var(--xl);
+    }
+}
+
+@media only screen and (min-width: 992px) {
+    section {
+        padding: 0 var(--xl) var(--xl);
+    }
+}

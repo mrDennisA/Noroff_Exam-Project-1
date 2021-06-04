@@ -1,0 +1,92 @@
+section {
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 800px;
+    margin: auto;
+    gap: var(--l);
+    padding: var(--l) var(--m);
+}
+
+.section-description {
+    flex: 2;
+    min-width: 60%;
+    display: grid;
+    grid-template-rows: auto 1fr;
+    gap: var(--l);
+}
+
+.section-description p {
+    padding: var(--m) var(--s);
+}
+
+.section-media {
+    flex: 1;
+    display: grid;
+    gap: var(--l);
+    min-width: 200px;
+}
+
+.section-media img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+
+    max-height: 75vw;
+}
+
+.section-media span {
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    gap: var(--m);
+}
+
+/* Links */
+.cv,
+.linkedIn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: var(--l);
+    height: var(--l);
+    color: var(--color08);
+    background-color: transparent;
+    /* box-shadow: 0 0 0 1px var(--color08) inset; */
+}
+
+.cv:hover,
+.linkedIn:hover,
+.cv:focus,
+.linkedIn:focus {
+    color: var(--color01);
+    background-color: var(--color08);
+    /* box-shadow: 0 0 0 1px transparent inset; */
+}
+
+.cv {
+    font-weight: 400;
+    font-size: 1.875rem;
+}
+
+.linkedIn {
+    font-family: var(--linkedIn);
+    font-size: 2rem;
+}
+
+@media only screen and (min-width: 768px) {
+    section {
+        gap: var(--l);
+        padding: var(--xl) var(--l);
+    }
+    .section-description,
+    .section-media {
+        gap: var(--l);
+    }
+
+    .section-description p {
+        padding: var(--m);
+    }
+}
+
+@media only screen and (min-width: 992px) {
+}
