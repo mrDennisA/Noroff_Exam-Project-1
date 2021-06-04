@@ -18,6 +18,7 @@
 }
 
 .modal img {
+    z-index: 1;
     max-width: calc(100vw);
     max-height: calc(100vh - var(--xl));
 }

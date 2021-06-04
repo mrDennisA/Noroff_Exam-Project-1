@@ -40,23 +40,23 @@ function article(article) {
     const modal = document.querySelectorAll("figure img");
 
     modal.forEach((enlarge) => {
-        enlarge.addEventListener("click", () => {
+        enlarge.addEventListener("click", (event) => {
             body.style.overflow = "hidden";
             modalContainer.style.display = "grid";
             modalContainer.innerHTML = `
                     <div class="modal">
-                        <div class="close pointer"><span></span><span></span></div>
+                        <div class="close pointer" data-id="overlay"><span></span><span></span></div>
                         <img class="shadow-radius" src="${event.target.currentSrc}"/>
                     </div>`;
 
-            function closeModal() {
-                body.style.overflow = "unset";
-                modalContainer.style.display = "none";
-                modalContainer.innerHTML = "";
+            function closeModal(event) {
+                if (event.target.dataset.id === "overlay") {
+                    body.style.overflow = "unset";
+                    modalContainer.style.display = "none";
+                    modalContainer.innerHTML = "";
+                }
             }
 
-            const close = document.querySelector(".close");
-            // close.addEventListener("click", closeModal)
             modalContainer.addEventListener("click", closeModal);
         });
     });
