@@ -45,7 +45,7 @@ function article(article) {
             modalContainer.style.display = "grid";
             modalContainer.innerHTML = `
                     <div class="modal">
-                        <div class="close pointer" data-id="overlay"><span></span><span></span></div>
+                        <div class="close pointer" data-id="overlay"><span data-id="overlay"></span><span data-id="overlay"></span></div>
                         <img class="shadow-radius" src="${event.target.currentSrc}"/>
                     </div>`;
 
